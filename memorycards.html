@@ -2,6 +2,10 @@
 <head>
 <title>FlashCards</title>
 <style>
+  nav {
+    margin: 20px;
+    position:relative;
+  }
   section {
     height: 100px;
     width: 100px;
@@ -10,11 +14,17 @@
   }
   
   .question{
+    position: absolute;
+    top: 0px;
+    left: 0px;
     background-color: lightblue;
     color: white;
   }
   
   .answer{
+    position: absolute;
+    top: 0px;
+    left: 0px;
     background-color: lightgreen;
     color: white;
   }
@@ -22,11 +32,13 @@
 </head>
 
 <body>
+<nav>
 <section class=question>
   What is 2+3?
 </section>
 <section class=answer>
   The answer is 5.
 </section>
+</nav>
 </body>
 </html>
