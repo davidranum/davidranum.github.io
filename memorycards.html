@@ -37,16 +37,20 @@
     display: none;
   }
   
+  input:checked ~ .question{
+    background-color: red;
+  }
+  
 </style>
 </head>
 
 <body>
 <nav>
+<input type=checkbox>
 <section class=answer>5</section>
 <section class=question>
   What is 2+3?
 </section>
-<input type=checkbox>
 </nav>
 <nav>
 <section class=answer>25</section>
