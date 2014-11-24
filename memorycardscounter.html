@@ -53,11 +53,13 @@
 <script type="text/javascript">
   counter = 0;
   updateCounter = function(){
-    
+    counter = counter + 1;
+    countspot=document.querySelector("#mycounter");
+    countspot.innerHTML="Correct: " + counter;
   }
 </script>
 <nav>
-<input class=checker type=checkbox>
+<input class=checker type=checkbox onclick="updateCounter();">
 <section class=answer>5</section>
 <section class=question>
   What is 2+3?
@@ -113,6 +115,6 @@
 </section>
 </nav>
 
-<h1 id="mycounter">Counter: 0</h1>
+<h2 id="mycounter">Counter: 0</h2>
 </body>
 </html>
