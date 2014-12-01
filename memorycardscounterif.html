@@ -1,1 +1,121 @@
+<html>
+<head>
+<title>FlashCards</title>
+<style>
+  nav {
+    margin: 20px;
+    position:relative;
+    float:left;
+    height:50px;
+    width:100px;
+  }
+  section {
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    border: 4px solid green;
+  }
+  
+  .question{
+    top: 0px;
+    left: 0px;
+    background-color: lightblue;
+    color: white;
+  }
+  
+  .answer{
+    top: 10px;
+    left: 10px;
+    background-color: lightgreen;
+    color: white;
+    font-size: 24;
+    text-align: center;
+  }
+  
+  .checker{
+    position: absolute;
+    top: 75px;
+    left: 50px;
+  }
+  
+  nav:hover .question{
+    display: none;
+  }
+  
+  input:checked ~ .question{
+    background-color: red;
+  }
+  
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+  counter = 0;
+  updateCounter = function(){
+    counter = counter + 1;
+    countspot=document.querySelector("#mycounter");
+    countspot.innerHTML="Correct: " + counter;
+  }
+</script>
+<nav>
+<input class=checker type=checkbox onclick="updateCounter();">
+<section class=answer>5</section>
+<section class=question>
+  What is 2+3?
+</section>
+</nav>
+<nav>
+<input class=checker type=checkbox onclick="updateCounter();">
+<section class=answer>25</section>
+<section class=question>
+  What is 5x5?
+</section>
+</nav>
+<nav>
+<input class=checker type=checkbox onclick="updateCounter();">
+<section class=answer>7</section>
+<section class=question>
+  What is 3+4?
+</section>
+</nav>
+<nav>
+<input class=checker type=checkbox onclick="updateCounter();">
+<section class=answer>10</section>
+<section class=question>
+  What is 2*5?
+</section>
+</nav>
+<nav>
+<input class=checker type=checkbox onclick="updateCounter();">
+<section class=answer>6</section>
+<section class=question>
+  What is 15-9?
+</section>
+</nav>
+<nav>
+<input class=checker type=checkbox onclick="updateCounter();">
+<section class=answer>7</section>
+<section class=question>
+  What is 21/3?
+</section>
+</nav>
+<nav>
+<input class=checker type=checkbox onclick="updateCounter();">
+<section class=answer>9</section>
+<section class=question>
+  What is 3x3?
+</section>
+</nav>
+<nav>
+<input class=checker type=checkbox onclick="updateCounter();">
+<section class=answer>18</section>
+<section class=question>
+  What is 36/2?
+</section>
+</nav>
+
+<h2 id="mycounter">Counter: 0</h2>
+</body>
+</html>
 
