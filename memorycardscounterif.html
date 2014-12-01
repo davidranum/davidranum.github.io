@@ -52,14 +52,22 @@
 <body>
 <script type="text/javascript">
   counter = 0;
-  updateCounter = function(){
-    counter = counter + 1;
+  updateCounter = function(somecheckbox){
+    thecheckbox = document.querySelector("#"+somecheckbox);
+    if (thecheckbox.checked)
+    {
+      counter = counter-1;
+    }
+    else
+    {
+      counter = counter + 1;
+    }
     countspot=document.querySelector("#mycounter");
     countspot.innerHTML="Correct: " + counter;
   }
 </script>
 <nav>
-<input class=checker type=checkbox onclick="updateCounter();">
+<input class=checker id="cb1" type=checkbox onclick="updateCounter(\"cb1\");">
 <section class=answer>5</section>
 <section class=question>
   What is 2+3?
