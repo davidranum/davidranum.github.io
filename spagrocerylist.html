@@ -14,7 +14,8 @@
         additem = function() {
              thelist = document.querySelector("#glist");
              theitem = document.createElement("li");
-             theitem.innerHTML="junk";
+             thetext  = document.querySelector('#item').value;
+             theitem.innerHTML=thetext;
 
              thelist.appendChild(theitem)
           }
