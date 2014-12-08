@@ -4,10 +4,19 @@
       <link rel="stylesheet" href="spagrocerylist.css" type="text/css"
   </head>
   <body>
-    <ul>
+    <ul id="glist">
       
     </ul>
     <input type="text" id="item" value="" />
     <button onclick="additem();">Add Item</button>
+    
+    <script type="text/javascript">
+        additem = function() {
+             thelist = document.querySelector("glist")
+             theitem = document.createElement("li")
+
+             thelist.appendChild(theitem)
+          }
+       </script>
   </body>
 </html>
