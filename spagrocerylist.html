@@ -23,6 +23,7 @@
              theitem = document.createElement("li");
              thetext  = document.querySelector('#item').value;
              theitem.innerHTML=thetext;
+             theitem.style.listStyleType="none";
              document.querySelector('#item').value="";
 
              thelist.appendChild(theitem)
