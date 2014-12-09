@@ -3,6 +3,10 @@ li {
     list-style-type: none;
 }
 
+.checkoffitem {
+    text-decoration: line-through;
+}
+
 .meat {
     background-color:red;
     }
