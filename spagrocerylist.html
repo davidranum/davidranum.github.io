@@ -18,10 +18,11 @@
     </select>
 
     <button onclick="additem();">Add Item</button>
-    <button onclick="clear();">Clear List</button>
+    <button onclick="clearitems();">Clear List</button>
     
     <script type="text/javascript">
-        clear = function() {
+        clearitems = function() {
+             alert("CLEAR");
              thelist = document.querySelector("#glist");
              thelist.innerHTML="XXXXXXX";
              localSave("glist");
