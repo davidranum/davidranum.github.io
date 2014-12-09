@@ -1,5 +1,6 @@
 li {
     width: 300px;
+    list-style-type: none;
 }
 
 .meat {
