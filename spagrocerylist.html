@@ -20,14 +20,8 @@
     <script type="text/javascript">
         additem = function() {
              thelist = document.querySelector("#glist");
-             //theitem = document.createElement("li");
-             
              thetext  = document.querySelector('#item').value;
-             //theitem.createTextNode=thetext;
-             //theitem.style.listStyleType="none";
              document.querySelector('#item').value="";
-
-
 
              contents = document.createElement("li")
              contents.style.listStyleType="none"
@@ -37,10 +31,8 @@
              stuff = document.createTextNode(thetext)
              contents.appendChild(stuff)
              thelist.appendChild(contents)
-
-
-             //thelist.appendChild(theitem)
           }
+          
        </script>
   </body>
 </html>
