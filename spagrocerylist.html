@@ -2,6 +2,8 @@
   <head>
       <title>Shopping List</title>
       <link rel="stylesheet" href="spagrocerylist.css" type="text/css">
+      <script src="http://bnmnetp.github.io/CS130/listsaver.js">
+</script>
   </head>
   <body>
     <ul id="glist">
@@ -36,9 +38,11 @@
              itemkind = dropdown.options[dropdown.selectedIndex].value
              
              contents.className=itemkind;
-             thelist.appendChild(contents)
+             thelist.appendChild(contents);
+             
+             localSave("#glist");
           }
-          
-       </script>
+      window.onload = function() { restoreList("#glist") }
+   </script>
   </body>
 </html>
