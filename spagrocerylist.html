@@ -18,8 +18,14 @@
     </select>
 
     <button onclick="additem();">Add Item</button>
+    <button onclick="clear();">Clear List</button>
     
     <script type="text/javascript">
+        clear = function() {
+             thelist = document.querySelector("#glist");
+             thelist.innerHTML="";
+             localSave("glist");
+        }
         additem = function() {
              thelist = document.querySelector("#glist");
              thetext  = document.querySelector('#item').value;
@@ -31,7 +37,7 @@
              box.setAttribute("type","checkbox")
              contents.appendChild(box);
              stuff = document.createTextNode(thetext)
-             stuff.addClass("checkoffitem");
+             //stuff.addClass("checkoffitem");
              contents.appendChild(stuff)
              
              dropdown = document.querySelector("#kind")
