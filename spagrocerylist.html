@@ -31,7 +31,11 @@
              stuff = document.createTextNode(thetext)
              //stuff.className="meat";
              contents.appendChild(stuff)
-             contents.className="meat";
+             
+             dropdown = document.querySelector("#kind")
+             itemkind = dropdown.options[dropdown.selectedIndex].text
+             
+             contents.className=itemkind;
              thelist.appendChild(contents)
           }
           
