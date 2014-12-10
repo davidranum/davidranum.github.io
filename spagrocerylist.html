@@ -23,7 +23,7 @@
     
     <script type="text/javascript">
         gotitem = function(item) {
-          alert(item.nextSibling);
+          item.nextSibling.addClass("checkoffitem");
         }
         clearitems = function() {
              thelist = document.querySelector("#glist");
