@@ -23,7 +23,7 @@
     
     <script type="text/javascript">
         checkoffitem = function() {
-          this.className=this.className + " " + "done";
+          this.classList.add("done");
           localSave("glist");
         }
         clearitems = function() {
@@ -56,7 +56,7 @@
              
              localSave("glist");
           }
-      window.onload = function() { alert("Restart"); restoreList("glist"); }
+      window.onload = function() { alert("Restart"); restoreList("glist",checkoffitem); }
    </script>
   </body>
 </html>
