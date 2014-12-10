@@ -29,6 +29,7 @@
              this.parentNode.classList.remove("done");
           localSave("glist");
         }
+        
         clearitems = function() {
              thelist = document.querySelector("#glist");
              thelist.innerHTML="";
@@ -59,8 +60,7 @@
              
              localSave("glist");
           }
-      window.onload = function() {restoreList("glist",checkoffitem);
-      temp=document.querySelector("#glist")}
+      window.onload = function() {restoreList("glist",checkoffitem);}
    </script>
   </body>
 </html>
