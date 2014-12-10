@@ -22,8 +22,8 @@
     <button onclick="clearitems();">Clear List</button>
     
     <script type="text/javascript">
-        gotitem = function(item) {
-          item.nextSibling.addClass("checkoffitem");
+        gotitem = function() {
+          this.nextSibling.addClass("checkoffitem");
         }
         clearitems = function() {
              thelist = document.querySelector("#glist");
@@ -40,7 +40,7 @@
              box = document.createElement("input")
              box.setAttribute("type","checkbox")
              
-             box.onclick = function(){gotitem(this); };
+             box.onclick = gotitem;
              
              contents.appendChild(box);
              stuff = document.createTextNode(thetext);
