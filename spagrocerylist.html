@@ -23,7 +23,7 @@
     
     <script type="text/javascript">
         gotitem = function() {
-          this.nextSibling.addClass("checkoffitem");
+          this.parentNode.addClass("done");
         }
         clearitems = function() {
              thelist = document.querySelector("#glist");
@@ -44,7 +44,7 @@
              
              contents.appendChild(box);
              stuff = document.createTextNode(thetext);
-             stuff.addClass("checkoffitem");
+             
              contents.appendChild(stuff);
              
              dropdown = document.querySelector("#kind")
