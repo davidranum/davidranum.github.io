@@ -40,7 +40,7 @@
              box = document.createElement("input")
              box.setAttribute("type","checkbox")
              
-             box.onclick = "gotitem();"
+             box.onclick = function(){alert("HELLO"); };
              
              contents.appendChild(box);
              stuff = document.createTextNode(thetext)
