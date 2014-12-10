@@ -23,7 +23,8 @@
     
     <script type="text/javascript">
         checkoffitem = function() {
-          this.className="done";
+          this.className=this.className + " " + "done";
+          localSave("glist");
         }
         clearitems = function() {
              thelist = document.querySelector("#glist");
