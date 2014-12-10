@@ -43,9 +43,9 @@
              box.onclick = function(){gotitem(this); };
              
              contents.appendChild(box);
-             stuff = document.createTextNode(thetext)
+             stuff = document.createTextNode(thetext);
              stuff.addClass("checkoffitem");
-             contents.appendChild(stuff)
+             contents.appendChild(stuff);
              
              dropdown = document.querySelector("#kind")
              itemkind = dropdown.options[dropdown.selectedIndex].value
