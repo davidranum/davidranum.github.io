@@ -23,7 +23,7 @@
     
     <script type="text/javascript">
         checkoffitem = function() {
-          this.classList.add("done");
+          this.parentNode.classList.add("done");
           localSave("glist");
         }
         clearitems = function() {
@@ -40,14 +40,13 @@
              
              box = document.createElement("input")
              box.setAttribute("type","checkbox")
-             
-             contents.onclick = checkoffitem;
+             box.onclick = checkoffitem;
              
              contents.appendChild(box);
+             
              stuff = document.createTextNode(thetext);
              
              contents.appendChild(stuff);
-             //contents.innerHTML=thetext;
              
              dropdown = document.querySelector("#kind")
              itemkind = dropdown.options[dropdown.selectedIndex].value
