@@ -44,15 +44,15 @@
              contents.onclick = checkoffitem;
              
              contents.appendChild(box);
-             //stuff = document.createTextNode(thetext);
+             stuff = document.createTextNode(thetext);
              
-             //contents.appendChild(stuff);
-             contents.innerHTML=thetext;
+             contents.appendChild(stuff);
+             //contents.innerHTML=thetext;
              
              dropdown = document.querySelector("#kind")
              itemkind = dropdown.options[dropdown.selectedIndex].value
              
-             contents.className=itemkind;
+             contents.classList.add(itemkind);
              thelist.appendChild(contents);
              
              localSave("glist");
