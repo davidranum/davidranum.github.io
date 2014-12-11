@@ -6,6 +6,7 @@
 </script>
   </head>
   <body>
+  <section>
     <h3>Cool Grocery App</h3>
     <ul id="glist">
       
@@ -20,6 +21,7 @@
 
     <button onclick="additem();">Add Item</button>
     <button onclick="clearitems();">Clear List</button>
+    </section>
     
     <script type="text/javascript">
         checkoffitem = function() {
@@ -62,5 +64,6 @@
           }
       window.onload = function() {restoreList("glist",checkoffitem);}
    </script>
+   
   </body>
 </html>
