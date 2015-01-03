@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 <head>
 <title>Temperature Conversion</title>
@@ -6,7 +8,7 @@
 </style>
 
 <script>
-   convert = function()
+   convertF = function()
    {
      var ctemp = document.querySelector("#inputtemp").value;
      var ftemp = ctemp*1.8 + 32;
@@ -14,14 +16,25 @@
      outputbox = document.querySelector("#answer");
      outputbox.innerHTML = ftemp;
    }
+   
+   convertC = function()
+   {
+     var ftemp = document.querySelector("#inputtemp").value;
+     var ctemp = (ftemp-32)/1.8;
+     
+     outputbox = document.querySelector("#answer");
+     outputbox.innerHTML = ctemp;
+   }
 </script>
 
 </head>
 
 <body>
 
-<input id="inputtemp" type="text">
-<button onclick="convert();">Convert</button>
+<input id="inputtemp" type="text" value=0>
+<label for="inputtemp">Enter Temperature</label>
+<button onclick="convertF();">Convert to F</button>
+<button onclick="convertC();">Convert to C</button>
 <h1 id="answer"></h1>
 
 </body>
