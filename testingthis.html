@@ -26,12 +26,23 @@
        box = document.createElement("input");
        box.type="checkbox";
        box.onclick=checkit;
+       word=document.createTextNode("RED");
+       item.appendChild(box);
+       item.appendChild(word);
+       thelist.appendChild(item);
+       
+       item=document.createElement("li");
+       box = document.createElement("input");
+       box.type="checkbox";
+       box.onclick=checkit;
+       word=document.createTextNode("GREEN");
+       item.appendChild(box);
+       item.appendChild(word);
+       thelist.appendChild(item);
        
      </script>
      
        <ul id="thelist"></ul>>
-     <li><input  type="checkbox" onclick="checkit()">RED</li>
-     <li><input  type="checkbox" onclick="checkit()">GREEN</li>
      
 
 
