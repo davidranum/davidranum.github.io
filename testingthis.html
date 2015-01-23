@@ -1,14 +1,18 @@
 <html>
    <head>
      <title>Colors</title>
-       <style>
+      <style>
            ul{
                list-style-type: none;
            }
            
-         </style>
+      </style>
          
-              <script>
+           
+   </head>
+   <body>
+   
+      <script>
        checkit = function() {
            alert(this);
              if (this.checked)
@@ -16,14 +20,20 @@
              else
                alert("NO");
        }
+       
+       thelist = document.querySelector("#thelist");
+       item=document.createElement("li");
+       box = document.createElement("input");
+       box.type="checkbox";
+       box.onclick=checkit;
+       
      </script>
-           
-   </head>
-   <body>
-       <ul>
+     
+       <ul id="thelist"></ul>>
      <li><input  type="checkbox" onclick="checkit()">RED</li>
      <li><input  type="checkbox" onclick="checkit()">GREEN</li>
-     </ul>
+     
+
 
 
 
