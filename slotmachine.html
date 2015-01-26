@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <style>
+            content {
+                position: relative;
+                float: left;
+                width: 200px;
+                height: 300px;
+            }
+            
+            .stop {
+                background-color: pink;
+                position: absolute;
+                top: 175px;
+                left: 40px;
+                
+            }
+            
+            #controls {
+                clear: both;
+            }
+            
+            .fruitpic {
+                position: absolute;
+            }
+            
+            
+            img {
+                border-width:3px;
+                border-color:purple;
+                border-style:solid;
+            }
+            
+            #spinbutton {
+                background-color: lightgreen;
+            }
+            
+            button {
+                font-family: fantasy;
+                font-size: 32px;
+            }
+            
+            
+            
+        </style>
+            
+<body>
+
+    <content id="#window1">
+        <img class="fruitpic" id="image1" src="http://knuth.luther.edu/~dranum/images/image3.jpg" width=150 height=150>
+        <button class="stop" onclick="stop1();">Stop</button>
+    </content>
+    <content id="#window2">
+        <img class="fruitpic" id="image2" src="http://knuth.luther.edu/~dranum/images/image1.jpg" width=150 height=150>
+        <button class="stop" onclick="stop2();">Stop</button>
+    </content>
+    <content id="window3">    
+        <img class="fruitpic" id="image3" src="http://knuth.luther.edu/~dranum/images/image5.jpg" width=150 height=150>
+        <button class="stop" onclick="stop3();">Stop</button>
+    </content>
+    
+    <section id="controls">
+    
+        <button id="spinbutton" onclick="spin();">SPIN</button>
+        <label for="bet">WAGER</label>
+        <input id="bet" type="text" id="thebet" value=1>
+        <h1 id="balance"></h1>
+    
+    </section>
+    
+    <script>
+    calculateWinnings = function() {
+        alert("YOU WON" + imagenumber1 + imagenumber2 + imagenumber3);
+    }
+    
+  changeImage1 = function() {
+      imagenumber1 = Math.floor(Math.random()*6);
+      //heading1 = document.querySelector("#number");
+      //heading1.innerHTML=imagenumber;
+      image1=document.querySelector("#image1");
+      image1.src="http://knuth.luther.edu/~dranum/images/image"+imagenumber1+".jpg";
+  }
+  changeImage2 = function() {
+      imagenumber2 = Math.floor(Math.random()*6);
+      //heading1 = document.querySelector("#number");
+      //heading1.innerHTML=imagenumber;
+      image2=document.querySelector("#image2");
+      image2.src="http://knuth.luther.edu/~dranum/images/image"+imagenumber2+".jpg";
+  }
+  changeImage3 = function() {
+      imagenumber3 = Math.floor(Math.random()*6);
+      //heading1 = document.querySelector("#number");
+      //heading1.innerHTML=imagenumber;
+      image3=document.querySelector("#image3");
+      image3.src="http://knuth.luther.edu/~dranum/images/image"+imagenumber3+".jpg";
+  }  
+  stop1 = function() {
+      window.clearInterval(intId1);
+      //window.clearInterval(intId2);
+      //window.clearInterval(intId3);
+      //calculateWinnings();
+  }
+  
+  stop2 = function() {
+      //window.clearInterval(intId1);
+      window.clearInterval(intId2);
+      //window.clearInterval(intId3);
+      //calculateWinnings();
+  }
+    
+   stop3 = function() {
+      //window.clearInterval(intId1);
+      //window.clearInterval(intId2);
+      window.clearInterval(intId3);
+      calculateWinnings();
+  }
+   spin = function(){
+        intId1 = window.setInterval(changeImage1, 100);
+        intId2 = window.setInterval(changeImage2, 100);
+        intId3 = window.setInterval(changeImage3, 100);
+   }
+   
+   setup = function(){
+       balance=document.querySelector("#balance");
+       balance.innerHTML = "CREDITS "+50;
+   }
+   
+   window.onload = setup();
+   
+</script>
+</body>
+</html>
