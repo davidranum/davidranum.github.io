@@ -23,6 +23,11 @@
                 font-size: 32px;
             }
             
+            #bet{
+                font-family: fantasy;
+                font-size: 32px;
+            }
+            
             .fruitpic {
                 position: absolute;
             }
@@ -77,8 +82,6 @@
     calculateWinnings = function() {
         //alert("YOU WON" + imagenumber1 + imagenumber2 + imagenumber3);
         userwager = document.querySelector("#bet").value;
-        creditdisplay = document.querySelector("#balance");
-        credits = credits-userwager;
         
         if (imagenumber1 == imagenumber2 && imagenumber2 == imagenumber3)
            winnings = userwager*5;
@@ -88,6 +91,7 @@
            else
               winnings = 0;
               
+        creditdisplay = document.querySelector("#balance");           
         credits = credits + winnings;
         creditdisplay.innerHTML = "CREDITS "+credits;
     }
