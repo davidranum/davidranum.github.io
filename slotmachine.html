@@ -70,7 +70,21 @@
     
     <script>
     calculateWinnings = function() {
-        alert("YOU WON" + imagenumber1 + imagenumber2 + imagenumber3);
+        //alert("YOU WON" + imagenumber1 + imagenumber2 + imagenumber3);
+        userwager = document.querySelector("#bet").value;
+        creditdisplay = document.querySelector("#balance");
+        credits = credits-userwager;
+        
+        if (imagenumber1 == imagenumber2 && imagenumber2 == imagenumber3)
+           winnings = userwager*5;
+        else
+           if (imagenumber1 == imagenumber2 || imagenumber2 == imagenumber3 || imagenumber1 == imagenumber3)
+              winnings = userwager*2;
+           else
+              winnings = 0;
+              
+        credits = credits + winnings;
+        creditdisplay.innerHTML = "CREDITS "+credits;
     }
     
   changeImage1 = function() {
@@ -121,8 +135,9 @@
    }
    
    setup = function(){
+       credits=50;
        balance=document.querySelector("#balance");
-       balance.innerHTML = "CREDITS "+50;
+       balance.innerHTML = "CREDITS "+credits;
    }
    
    window.onload = setup();
