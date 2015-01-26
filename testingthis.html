@@ -13,15 +13,15 @@
    <body>
           <ul id="thelist"></ul>
       <script>
-       checkit = function() {
-           alert(this);
-             if (this.checked)
+       checkit = function(obj) {
+           alert(obj);
+             if (obj.checked)
                alert("YES");
              else
                alert("NO");
        }
        
-       thelist = document.querySelector("#thelist");
+       /*thelist = document.querySelector("#thelist");
        item=document.createElement("li");
        box = document.createElement("input");
        box.type="checkbox";
@@ -38,11 +38,14 @@
        word=document.createTextNode("GREEN");
        item.appendChild(box);
        item.appendChild(word);
-       thelist.appendChild(item);
+       thelist.appendChild(item);*/
        
      </script>
      
-
+   <input type="checkbox" onclick="checkit(this);">RED</input>
+   <input type="checkbox" onclick="checkit(this);"<GREEN</input>
+   
+   
      
 
 
