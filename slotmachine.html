@@ -134,6 +134,12 @@
       calculateWinnings();
   }
    spin = function(){
+        userwager = document.querySelector("#bet").value;
+        creditdisplay = document.querySelector("#balance");
+        credits = credits-userwager;
+        
+        creditdisplay.innerHTML = "CREDITS "+credits;
+        
         intId1 = window.setInterval(changeImage1, 100);
         intId2 = window.setInterval(changeImage2, 100);
         intId3 = window.setInterval(changeImage3, 100);
