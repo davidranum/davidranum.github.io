@@ -11,23 +11,6 @@ h1 {
 </style>
 
 <script>
-   convertF = function()
-   {
-     var ctemp = document.querySelector("#inputtemp").value;
-     var ftemp = ctemp*1.8 + 32;
-     
-     outputbox = document.querySelector("#answer");
-     outputbox.innerHTML = ftemp;
-   }
-   
-   convertC = function()
-   {
-     var ftemp = document.querySelector("#inputtemp").value;
-     var ctemp = (ftemp-32)/1.8;
-     
-     outputbox = document.querySelector("#answer");
-     outputbox.innerHTML = ctemp;
-   }
    
    convert=function(){
       startunitselect = document.querySelector("#startunit");
@@ -38,7 +21,22 @@ h1 {
       endunitindex = endunitselect.selectedIndex;
       endunit = endunitselect.options[endunitindex].value;    
       
-      alert(startunit + " " + endunit);
+      temp = document.querySelector("#inputtemp").value;
+      
+      if (startunit == "Celsius" && endunit == "Celsius")
+          newtemp = temp;
+          
+      if (startunit == "Fahrenheit" && endunit == "Fahrenheit")
+         newtemp = temp;
+         
+      if (startunit == "Celsius" && endunit == "Fahrenheit")
+          newtemp = temp * 1.8 + 32;
+          
+      if (startunit == "Fahrenheit" && endunit == "Celsius")
+         newtemp = (temp - 32) / 1.8;
+     
+     outputbox = document.querySelector("#outputtemp");
+     outputbox.value = newtemp;
       
    }
 </script>
