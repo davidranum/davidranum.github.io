@@ -30,11 +30,11 @@ h1 {
    }
    
    convert=function(){
-      startunitselect = document.queryElement("#startunit");
+      startunitselect = document.querySelector("#startunit");
       startunitindex = startunitselect.selectedIndex;
       startunit = startunitselect.options[startunitindex].value;
       
-      endunitselect = document.queryElement("#endunit");
+      endunitselect = document.querySelector("#endunit");
       endunitindex = endunitselect.selectedIndex;
       endunit = endunitselect.options[endunitindex].value;    
       
