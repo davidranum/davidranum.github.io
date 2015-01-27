@@ -34,13 +34,24 @@ h1 {
 
 <body>
 
+<select id="startunit">
+   <option>Celsius</option>
+   <option>Fahrenheit</option>
+</select>
+
 <label for="inputtemp">Enter Temperature</label>
 <input id="inputtemp" type="text" value=0>
 
-<button onclick="convertF();">Convert to F</button>
-<button onclick="convertC();">Convert to C</button>
+<label for="outputtemp">Enter Temperature</label>
+<input id="outputtemp" type="text" value="">
 
-<h1 id="answer"></h1>
+
+<select id="endunit">
+   <option>Celsius</option>
+   <option>Fahrenheit</option>
+</select>
+
+<button onclick="convert();">Convert to F</button>
 
 </body>
 </html>
