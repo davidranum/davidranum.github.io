@@ -28,6 +28,19 @@ h1 {
      outputbox = document.querySelector("#answer");
      outputbox.innerHTML = ctemp;
    }
+   
+   convert=function(){
+      startunitselect = document.queryElement("#startunit");
+      startunitindex = startunitselect.selectedIndex;
+      startunit = startunitselect.options[startunitindex].value;
+      
+      endunitselect = document.queryElement("#endunit");
+      endunitindex = endunitselect.selectedIndex;
+      endunit = endunitselect.options[endunitindex].value;    
+      
+      alert(startunit + " " + endunit);
+      
+   }
 </script>
 
 </head>
