@@ -2,25 +2,45 @@
 
     <head>
         <style>
-            .High {
+            .high {
                 color:red;
             }
             
-            .Medium {
+            .medium {
                 color:blue;
             }
             
-            .Low {
+            .low {
                 color:black;
+                
+            li {
+                list-style-type: none;
+            }
+            
+            .done {
+                text-decoration: line-through;
             }
             
         </style>
         
         <script>
+            checkoff = function(){
+                if (this.checked)
+                   this.parentNode.classList.add("done");
+                else
+                   this.parentNode.classList.remove("done");
+            }
+        
             additem=function(){
                 theitem = document.querySelector("#item");
                 te = document.createTextNode(theitem.value);
                 li = document.createElement("li")
+                
+                box = document.createElement("input");
+                box.type = "checkbox";
+                box.onclick = checkoff;
+                
+                li.appendChild(box);
                 li.appendChild(te);
                 thelist=document.querySelector("#todolist");
                 thelist.appendChild(li);
