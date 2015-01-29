@@ -1,0 +1,50 @@
+<html>
+
+    <head>
+        <style>
+            .high {
+                color:red;
+            }
+            
+            .medium {
+                color:blue;
+            }
+            
+            .low {
+                color:black;
+            }
+            
+        </style>
+        
+        <script>
+            additem=function(){
+                theitem = document.querySelector("#item");
+                te = document.createTextNode(theitem.value);
+                li = document.createElement("li")
+                li.appendChild(te);
+                thelist=document.querySelector("#todolist");
+                thelist.appendChild(li);
+                theitem.value="";
+            }
+        </script>
+     </head>
+            
+     <body>
+            
+            <h1>To Do List</h1>
+            
+            <ul id="todolist">
+            </ul>
+         
+         <label for="item">Item</label>
+         <input type="text" id="item">
+         
+         <button onclick="additem()">Add It</button>
+         
+         
+            
+    </body>
+     
+
+
+</html>
