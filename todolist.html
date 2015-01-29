@@ -31,6 +31,11 @@
                 else
                    this.parentNode.classList.remove("done");
             }
+            
+            clear = function(){
+                thelist = document.querySelector("#todolist");
+                thelist.innerHTML="";
+            }
         
             additem=function(){
                 theitem = document.querySelector("#item");
@@ -76,7 +81,7 @@
             <ul id="todolist">
             </ul>
          
-         
+         <button onclick="clear()">Clear List</button>
             
     </body>
      
