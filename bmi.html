@@ -11,8 +11,8 @@
     <label for="hbox">Height</label>
     <input type="range" id="hbox" value="50" min="30" max="96" onmousemove="calculatebmi();">
     
-    <h1 id="weightout"></h1>
-    <h1 id="heightout"></h1>
+    <h1 id="weightout">100</h1>
+    <h1 id="heightout">50</h1>
     <h1 id="bmiout"></h1>
     
     <script>
@@ -24,7 +24,7 @@
         
         document.querySelector("#weightout").innerHTML=weight;
         document.querySelector("#heightout").innerHTML=height;
-        document.querySelector("#gmiout").innerHTML=bmi;
+        document.querySelector("#bmiout").innerHTML=bmi;
       }
     </script>
   </body>
