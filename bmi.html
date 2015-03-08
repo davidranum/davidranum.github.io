@@ -14,5 +14,18 @@
     <h1 id="weightout"></h1>
     <h1 id="heightout"></h1>
     <h1 id="bmiout"></h1>
+    
+    <script>
+      calculatebmi=function(){
+        weight=document.querySelector("#wbox").value;
+        height=document.querySelector("#hbox").value;
+        
+        bmi=(weight*703)/(height*height)
+        
+        document.querySelector("#weightout").innerHTML=weight;
+        document.querySelector("#heightout").innerHTML=height;
+        document.querySelector("#gmiout").innerHTML=bmi;
+      }
+    </script>
   </body>
 </html>
