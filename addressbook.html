@@ -6,6 +6,19 @@
       #fn,#ln,#phone,#email {
         display:block;
       }
+      
+      table{
+        background-color: pink;
+        border-style:solid;
+        border-width: 3px;
+        border-color: black;
+      }
+      
+      td {
+        border-style:dotted;
+        border-width: 2px;
+        border-color: blue;
+      }
     </style>
   </head>
   <body>
@@ -51,6 +64,11 @@
       newrow.appendChild(td4);
       table=document.querySelector("#addresstable");
       table.appendChild(newrow);
+      
+      td1.innerHTML="";
+      td2.innerHTML="";
+      td3.innerHTML="";
+      td4.innerHTML="";
       
     }
       
