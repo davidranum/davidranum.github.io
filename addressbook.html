@@ -30,6 +30,27 @@
     </table>
     
     <script>
+      fn=document.querySelector("#fn").value;
+      ln=document.querySelector("#ln").value;
+      phone=document.querySelector("#phone").value;
+      email=document.querySelector("#email").value;
+      
+      newrow = document.createElement("tr");
+      td1=document.createElement("td");
+      td1.innerHTML=fn;
+      td2=document.createElement("td");
+      td2.innerHTML=ln;
+      td3=document.createElement("td");
+      td3.innerHTML=phone;
+      td4=document.createElement("td");
+      td4.innerHTML=email;
+      newrow.appendChild(td1);
+      newrow.appendChild(td2);
+      newrow.appendChild(td3);
+      newrow.appendChild(td4);
+      table=document.querySelector("addresstable");
+      table.appendChild(newrow);
+      
       
       
       
